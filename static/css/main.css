@@ -1,0 +1,136 @@
+body {
+  background-color: #D2E0E8;
+}
+
+h1 {
+  color: #152630;
+  text-align: center;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+/* Add background color to the top navigation */
+.icon-bar {
+  background-color: #3C698F;
+  width: 40%;
+  overflow: auto; /* Overflow due to float */
+  border-radius: 15px;
+  margin: auto;
+}
+
+/* Style the links inside the navigation bar */
+.icon-bar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  width: 25%;
+  padding: 12px 0;
+  font-size: 36px;
+  transition: all 0.3s ease;
+}
+
+/* Change the color of links on hover */
+.icon-bar a:hover {
+  background-color: #5A9ED6;
+  color: #f2f2f2;
+}
+
+/* Add a color to the active/current link */
+.icon-bar a.active {
+  background-color: #5A9ED6;
+  color: white;
+}
+
+/*to center landing image*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
+/*Login form style*/
+/* Bordered form */
+form {
+  border: 3px solid #152630;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 160px;
+  padding: 12px 20px;
+  margin: 15px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+input[type=submit]{
+  background-color: #3C698F;
+  color: #f2f2f2;
+  padding: 14px 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 15px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #3C698F;
+  color: #f2f2f2;
+  padding: 14px 20px;
+  /* margin: 8px 0; */
+  border: none;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  background-color: #5A9ED6;
+  color: #f2f2f2;
+}
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+.button1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .button2
+{
+  color: #3C698F;
+  background-color: none;
+  padding: none;
+  width: auto;
+  border-radius: none;
+} */
+
+.center-text {
+  text-align: center;
+}
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
