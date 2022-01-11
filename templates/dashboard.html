@@ -8,9 +8,15 @@
   </head>
 
 <body>
+  <img src="https://github.com/hrissix/pythonflask-app/blob/main/tweety-logo-full.png?raw=true"
+       style="  display: block; margin-left: auto; margin-right: auto; padding:50px;">
+    <br>
     <h1>Hello you are already logged in!</h1>
-    <a href="{{ url_for('logout')}}">Press here to log out.</a><br>
-    <a href="{{ url_for('home')}}">Press here to home page</a>
+    <div class="center-text">
+      <a href="{{ url_for('home')}}">Press here to go to HOME page</a>
+      <br>
+      <a href="{{ url_for('logout')}}">Press here to LOG out.</a>
+    </div>
 </body>
 
 </html>

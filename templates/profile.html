@@ -8,9 +8,8 @@
 </head>
 
 <body>
-  <img src="https://github.com/hrissix/pythonflask-app/blob/main/tweety-logo-full.png?raw=true" style="  display: block;
-    margin-left: auto;
-    margin-right: auto;">
+  <img src="https://github.com/hrissix/pythonflask-app/blob/main/tweety-logo-full.png?raw=true"
+       style="  display: block; margin-left: auto; margin-right: auto; padding:50px;">
     <br>
   <div class="icon-bar">
   <a href="{{url_for('home')}}"><i class="fa fa-home"></i></a>
@@ -18,7 +17,16 @@
   <a href="{{url_for('explore')}}"><i class="fa fa-search"></i></a>
   <a href="{{ url_for('logout')}}"><i class="fa fa-share"></i></a>
 </div>
+<br>
+<form method="POST" action="greet" class="greet_form">
 
+  {% for message in get_flashed_messages()%}
+  <p> {{message}}</p>
+  {% endfor %}
+  <input type="text" name="name_input">
+  <br>
+  <input type="submit" value="GREET" id="greet">
+</form>
   <br>
 </body>
 
