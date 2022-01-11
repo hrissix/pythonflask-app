@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, url_for, redirect, flash, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
@@ -32,7 +32,7 @@ class RegisterForm(FlaskForm):
 
     password=PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Password"})
 
-    submit=SubmitField("Register")
+    submit=SubmitField("SIGN UP")
 
     def validate_username(self, username):
         existing_user_username = User.query.filter_by(username=username.data).first()
@@ -44,7 +44,7 @@ class LoginForm(FlaskForm):
 
     password=PasswordField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Password"})
 
-    submit=SubmitField("Login")
+    submit=SubmitField("LOGIN")
 
 # class PostTweetForm(Form):
 #     tweet = StringField(
@@ -96,13 +96,19 @@ def register():
 @app.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
+    flash("What's your name?")
+    return render_template('profile.html')
+
+@app.route('/greet', methods=['GET', 'POST'])
+@login_required
+def greet():
+    flash("Hello " + str(request.form['name_input'])+", great to see you!")
     return render_template('profile.html')
 
 @app.route('/explore', methods=['GET', 'POST'])
 @login_required
 def explore():
     return render_template('explore.html')
-
 
 if __name__ =='__main__':
     db.create_all()
