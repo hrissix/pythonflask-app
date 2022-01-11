@@ -1,5 +1,6 @@
 body {
   background-color: #D2E0E8;
+  text-align: center;
 }
 
 h1 {
@@ -71,6 +72,7 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   border-radius: 15px;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 input[type=submit]{
   background-color: #3C698F;
@@ -87,6 +89,13 @@ input[type=submit]{
   display: inline-block;
   justify-content: center;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+input[type=submit]:hover{
+  background-color: #5A9ED6;
+  color: #f2f2f2;
 }
 
 /* Set a style for all buttons */
@@ -102,6 +111,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Add a hover effect for buttons */
@@ -118,14 +128,6 @@ button:hover {
   justify-content: center;
   align-items: center;
 }
-/* .button2
-{
-  color: #3C698F;
-  background-color: none;
-  padding: none;
-  width: auto;
-  border-radius: none;
-} */
 
 .center-text {
   text-align: center;
@@ -133,4 +135,8 @@ button:hover {
 a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
+}
+.greet_form{
+  border: none;
+  width: 100%;
 }
