@@ -21,6 +21,7 @@ login_manager.login_view="login"
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+#the username must be unique, can't have users with the same name
 
 class User(db.Model, UserMixin):
     id=db.Column(db.Integer, primary_key=True)
@@ -57,6 +58,7 @@ class LoginForm(FlaskForm):
 def home():
     return render_template('index2.html')
 
+#login method, validator hecks if the user and password match with the data if so the user is redirected to the dashboard
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -79,7 +81,7 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-
+#creating funtion for users to register, the validator hashes the password
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     form=RegisterForm()
@@ -93,6 +95,7 @@ def register():
 
     return render_template('register.html', form=form)
 
+# creating routes for pages, some require the user to have logged in
 @app.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
@@ -110,6 +113,7 @@ def greet():
 def explore():
     return render_template('explore.html')
 
+#crating the database
 if __name__ =='__main__':
     db.create_all()
     app.run(debug=True)
